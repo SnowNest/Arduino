@@ -29,11 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.btnOn = new System.Windows.Forms.Button();
+            this.btnOff = new System.Windows.Forms.Button();
+            this.SPort = new System.IO.Ports.SerialPort(this.components);
+            this.SuspendLayout();
+            // 
+            // btnOn
+            // 
+            this.btnOn.Location = new System.Drawing.Point(12, 12);
+            this.btnOn.Name = "btnOn";
+            this.btnOn.Size = new System.Drawing.Size(75, 23);
+            this.btnOn.TabIndex = 0;
+            this.btnOn.Text = "Encender";
+            this.btnOn.UseVisualStyleBackColor = true;
+            this.btnOn.Click += new System.EventHandler(this.btnOn_Click);
+            // 
+            // btnOff
+            // 
+            this.btnOff.Location = new System.Drawing.Point(12, 41);
+            this.btnOff.Name = "btnOff";
+            this.btnOff.Size = new System.Drawing.Size(75, 23);
+            this.btnOff.TabIndex = 1;
+            this.btnOff.Text = "Apagar";
+            this.btnOff.UseVisualStyleBackColor = true;
+            this.btnOff.Click += new System.EventHandler(this.btnOff_Click);
+            // 
+            // SPort
+            // 
+            this.SPort.PortName = "COM3";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnOff);
+            this.Controls.Add(this.btnOn);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnOn;
+        private System.Windows.Forms.Button btnOff;
+        private System.IO.Ports.SerialPort SPort;
     }
 }
 

@@ -16,5 +16,32 @@ namespace ArduinoApp
         {
             InitializeComponent();
         }
+
+        private void btnOn_Click(object sender, EventArgs e)
+        {
+            SPort.Open();
+
+
+
+            SPort.Write("1");
+
+ 
+
+            SPort.Close();
+
+        }
+
+        private void btnOff_Click(object sender, EventArgs e)
+        {
+            SPort.Open();
+
+
+
+            SPort.Write("0");
+
+
+
+            SPort.Close();
+        }
     }
 }
